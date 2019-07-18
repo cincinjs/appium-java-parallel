@@ -80,10 +80,10 @@ public class AndroidNativeParallelTests {
 
 
         //locate the edit box of the calculator
-        WebElement results = driver.findElement(By.id("result"));
+        String results = driver.findElement(By.id("result")).getText();
 
         //Check the calculated value on the edit box
-        assert results.getText().equals("4"):"Actual value is : "+results.getText()+" did not match with expected value: 4";
+        assert results.equals("4"):"Actual value is : "+results+" did not match with expected value: 4";
     }
 
 }
