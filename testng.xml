@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="AndroidNativeSuite" verbose="1" parallel="tests" thread-count="2">
+    <test name="Android native app test on Android 6">
+        <parameter name="deviceName_" value="Android 6.0"/>
+        <parameter name="udid_" value="192.168.154.102:5555"/>
+        <parameter name="platformVersion" value="6.0"/>
+        <parameter name="url_" value="0.0.0.0:8200/wd/hub"/>
+        <classes>
+            <class name="com.appium.test.AndroidNativeParallelTests" />
+        </classes>
+    </test>
+    <test name="Android native app test on Android 8">
+        <parameter name="deviceName_" value="Android 8.0"/>
+        <parameter name="udid_" value="192.168.154.101:5555"/>
+        <parameter name="platformVersion" value="8.0"/>
+        <parameter name="url_" value="0.0.0.0:8201/wd/hub"/>
+        <classes>
+            <class name="com.appium.test.AndroidNativeParallelTests" />
+        </classes>
+    </test>
+</suite>
